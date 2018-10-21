@@ -1,5 +1,9 @@
 # **img-search-frontend-vezba using unsplash APIs**
 
+The project was started as an excercize to build an simple image search app with: Vanilla JS, React.js, Angular and Vue.js using the Unsplash engine, in order to gain a better perspective of the differences and bennefits of these framework liraries.
+
+A research for Unsplash API and usage was also done in the process.
+
 
 ## **I Basic single image search API**
 

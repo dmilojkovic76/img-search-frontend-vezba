@@ -3,6 +3,10 @@ const inputBox = document.querySelector("#search_term");
 
 const searchResultsElem = document.querySelector(".search_results");
 
+const loadingImg = document.querySelector(".loading_img");
+
+loadingImg.style.display = "none";
+
 const API_URL = "https://api.unsplash.com/search/photos/?query=";
 const CLIENT_ID = "&client_id=4ed859e100f487b468f969258ab8719cf86608077837e3a783acd3cfc00c3e6a";
 
@@ -15,11 +19,13 @@ function formSubmitted(event) {
 }
 
 function search(s) {
+  searchResultsElem.textContent = "";
+  loadingImg.style.display = "";
   const searchUrl = API_URL + s + CLIENT_ID;
   fetch(searchUrl)
     .then(response => response.json())
     .then(data => {
-      console.log(data.results)//eslint-disable-line
+      // console.log(data.results)//eslint-disable-line
       data.results.forEach( img => {
         const newAElem = document.createElement("a");
         const newImgElem = document.createElement("img");
@@ -27,7 +33,7 @@ function search(s) {
         const newFigcaptionElem = document.createElement("figcaption");
         newAElem.href = img.urls.full;
         newAElem.target = "_blank";
-        newAElem.rel = "search";
+        newAElem.rel = "noopener noreferrer";
         newImgElem.src = img.urls.thumb;
         newImgElem.alt = img.description + " by " + img.user.username;
         newFigcaptionElem.textContent = img.description + " by " + img.user.username;
@@ -36,5 +42,6 @@ function search(s) {
         newAElem.appendChild(newFigureElem);
         searchResultsElem.appendChild(newAElem);
       })
+      loadingImg.style.display = "none";
     });
 }
