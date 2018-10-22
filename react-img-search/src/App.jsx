@@ -23,7 +23,8 @@ class App extends Component {
     event.preventDefault();
 
     this.setState({
-      loading: true
+      loading: true,
+      images: []
     });
 
     API.search(this.state.searchTerm)
