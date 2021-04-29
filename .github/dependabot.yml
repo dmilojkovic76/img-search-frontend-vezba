@@ -1,0 +1,104 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/angular-img-search"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@angular/language-service"
+    versions:
+    - 11.1.1
+    - 11.1.2
+    - 11.2.0
+    - 11.2.1
+    - 11.2.10
+    - 11.2.11
+    - 11.2.2
+    - 11.2.3
+    - 11.2.4
+    - 11.2.5
+    - 11.2.6
+    - 11.2.7
+    - 11.2.8
+    - 11.2.9
+  - dependency-name: karma
+    versions:
+    - 6.0.3
+    - 6.0.4
+    - 6.1.0
+    - 6.1.1
+    - 6.1.2
+    - 6.2.0
+    - 6.3.0
+    - 6.3.1
+  - dependency-name: jasmine-core
+    versions:
+    - 3.6.0
+    - 3.7.0
+  - dependency-name: rxjs
+    versions:
+    - 6.6.3
+    - 6.6.6
+  - dependency-name: jasmine-spec-reporter
+    versions:
+    - 6.0.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+- package-ecosystem: npm
+  directory: "/react-img-search"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+- package-ecosystem: npm
+  directory: "/vanilla-js-img-search"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/vue-img-search"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: "@vue/cli-plugin-babel"
+    versions:
+    - 4.5.11
+  - dependency-name: "@vue/cli-service"
+    versions:
+    - 4.5.11
+  - dependency-name: lint-staged
+    versions:
+    - 10.5.3
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
